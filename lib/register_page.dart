@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_final/main_page.dart';
 import 'constants.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
+  static String route = "register_page";
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -34,23 +36,31 @@ class _RegisterPageState extends State<RegisterPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
+        backgroundColor: backgroundColor,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(kToolbarHeight + 20),
+          child: AppBar(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25),
+            )),
+            leading: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
             ),
-          ),
-          elevation: 0,
-          backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black),
-          title: Text(
-            'Yuk isi data diri',
-            style: largeText20,
+            elevation: 0,
+            backgroundColor: Colors.white,
+            iconTheme: IconThemeData(color: Colors.black),
+            title: Text(
+              'Yuk isi data diri',
+              style: largeText20,
+            ),
           ),
         ),
         bottomNavigationBar: SafeArea(
@@ -66,7 +76,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     fixedSize: Size(double.infinity, 64)),
                 onPressed: () {
                   print(emailController.text);
-                  Navigator.pushNamed(context, '/mainpage');
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      MainPage.route, (context) => false);
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

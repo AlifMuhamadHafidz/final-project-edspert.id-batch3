@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_final/constants.dart';
+import 'package:project_final/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+  static String route = "login_screen";
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -13,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: backgroundGrayscale,
+      backgroundColor: backgroundColor,
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
@@ -58,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                           )),
                       fixedSize: Size(double.infinity, 50)),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/register');
+                    Navigator.pushNamed(context, RegisterPage.route);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

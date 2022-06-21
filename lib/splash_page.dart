@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:project_final/constants.dart';
+import 'package:project_final/login_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
+  static String route = "splash_screen";
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -17,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(
       Duration(seconds: 3),
-      (() => Navigator.pushReplacementNamed(context, '/login')),
+      (() => Navigator.of(context).pushReplacementNamed(LoginPage.route)),
     );
     super.initState();
   }

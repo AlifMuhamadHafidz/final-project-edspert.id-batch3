@@ -13,6 +13,7 @@ const Color gradientSecondaryColor2 = Color(0xFF83EE9D);
 const Color gradientAccentColor1 = Color(0xFFFF4F03);
 const Color gradientAccentColor2 = Color(0xFFFF8707);
 
+const Color backgroundColor = Color(0xFFF0F3F5);
 const Color titleActiveGrayscale = Color(0xFF14142B);
 const Color bodyGrayscale = Color(0xFF4E4B66);
 const Color labelGrayscale = Color(0xFF85868B);
@@ -27,6 +28,18 @@ const Color primaryTextColor = Color(0xFF1C2936);
 const Color primarySubtitleTextColor = Color(0xFF6A7483);
 const Color hintTextColor = Color(0xFFAAAAAA);
 const Color genderTextColor = Color(0xFF282828);
+
+TextStyle selectedBottomText = GoogleFonts.poppins(
+  color: Color(0xFF000000),
+  fontWeight: FontWeight.w600,
+  fontSize: 13,
+);
+
+TextStyle unselectedBottomText = GoogleFonts.poppins(
+  color: Color(0xFFA9A9A9),
+  fontWeight: FontWeight.w600,
+  fontSize: 13,
+);
 
 TextStyle daftarText = GoogleFonts.poppins(
   color: Colors.white,
