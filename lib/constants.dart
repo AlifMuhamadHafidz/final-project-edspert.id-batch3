@@ -13,7 +13,7 @@ const Color gradientSecondaryColor2 = Color(0xFF83EE9D);
 const Color gradientAccentColor1 = Color(0xFFFF4F03);
 const Color gradientAccentColor2 = Color(0xFFFF8707);
 
-const Color backgroundColor = Color(0xFFF0F3F5);
+const Color backgroundColor = Color(0xFFF3F7F8);
 const Color titleActiveGrayscale = Color(0xFF14142B);
 const Color bodyGrayscale = Color(0xFF4E4B66);
 const Color labelGrayscale = Color(0xFF85868B);
@@ -28,6 +28,48 @@ const Color primaryTextColor = Color(0xFF1C2936);
 const Color primarySubtitleTextColor = Color(0xFF6A7483);
 const Color hintTextColor = Color(0xFFAAAAAA);
 const Color genderTextColor = Color(0xFF282828);
+
+TextStyle subtitlePelajaranText = GoogleFonts.poppins(
+  color: Color(0xFF8E8E8E),
+  fontWeight: FontWeight.w500,
+  fontSize: 12,
+);
+
+TextStyle pilihPelajaranText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w700,
+  fontSize: 16,
+);
+
+TextStyle pelajaranText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w700,
+  fontSize: 12,
+);
+
+TextStyle homeText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w700,
+  fontSize: 18,
+);
+
+TextStyle haiText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w700,
+  fontSize: 12,
+);
+
+TextStyle selamatDatangText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);
+
+TextStyle diskusiSoalText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+  fontSize: 20,
+);
 
 TextStyle selectedBottomText = GoogleFonts.poppins(
   color: Color(0xFF000000),

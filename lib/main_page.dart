@@ -20,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        backgroundColor: primaryColor,
         child: Image.asset(
           'assets/discuss_icon.png',
           width: 30,

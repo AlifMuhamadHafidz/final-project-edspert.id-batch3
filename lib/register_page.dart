@@ -38,13 +38,14 @@ class _RegisterPageState extends State<RegisterPage> {
       home: Scaffold(
         backgroundColor: backgroundColor,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(kToolbarHeight + 20),
+          preferredSize: Size.fromHeight(kToolbarHeight + 30),
           child: AppBar(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(25),
-              bottomRight: Radius.circular(25),
-            )),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
+            ),
             leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
