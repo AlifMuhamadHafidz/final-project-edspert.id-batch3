@@ -29,6 +29,12 @@ const Color primarySubtitleTextColor = Color(0xFF6A7483);
 const Color hintTextColor = Color(0xFFAAAAAA);
 const Color genderTextColor = Color(0xFF282828);
 
+TextStyle appBarText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w700,
+  fontSize: 18,
+);
+
 TextStyle subtitlePelajaranText = GoogleFonts.poppins(
   color: Color(0xFF8E8E8E),
   fontWeight: FontWeight.w500,

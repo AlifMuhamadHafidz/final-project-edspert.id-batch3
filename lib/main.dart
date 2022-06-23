@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_final/login_page.dart';
+import 'package:project_final/main/latihan_soal/mapel_page.dart';
+import 'package:project_final/main/latihan_soal/paket_soal_page.dart';
 import 'package:project_final/main_page.dart';
 
 import 'package:project_final/splash_page.dart';
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Latihan Soal',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
@@ -23,6 +26,8 @@ class MyApp extends StatelessWidget {
         LoginPage.route: (context) => LoginPage(),
         RegisterPage.route: (context) => RegisterPage(),
         MainPage.route: (context) => MainPage(),
+        MapelPage.route: (context) => MapelPage(),
+        PaketSoalPage.route: (context) => PaketSoalPage(),
       },
     );
   }

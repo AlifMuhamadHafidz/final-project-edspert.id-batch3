@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_final/constants.dart';
+import 'package:project_final/main/latihan_soal/mapel_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,92 +15,139 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Hai,  Nama User',
-                          style: haiText,
-                        ),
-                        Text(
-                          'Selamat Datang',
-                          style: selamatDatangText,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/avatar_icon.png',
-                    width: 35,
-                    height: 35,
-                  ),
-                ],
-              ),
-            ),
+            _buildUserHomeProfile(),
+            _buildTopBanner(context),
+            _buildHomeListMapel(context),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0),
-              decoration: BoxDecoration(
-                  color: primaryColor, borderRadius: BorderRadius.circular(20)),
-              height: 147,
-              width: double.infinity,
-              child: Stack(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20.0, vertical: 15),
-                      child: Text(
-                        'Mau kerjain latihan soal apa hari ini?',
-                        style: homeText,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    right: 0,
-                    bottom: 0,
-                    child: Image.asset(
-                      'assets/home_image.png',
-                      width: MediaQuery.of(context).size.width * 0.5,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 21),
               child: Column(
                 children: [
                   Row(
                     children: [
                       Text(
-                        'Pilih Pelajaran',
+                        'Terbaru',
                         style: pilihPelajaranText,
                       ),
                       Spacer(),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Lihat Semua'),
-                      )
                     ],
                   ),
-                  MapelWidget(),
-                  MapelWidget(),
-                  MapelWidget(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 170,
+                    child: ListView.builder(
+                      itemCount: 2,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: ((context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Image.asset('assets/banner_image.png'),
+                        );
+                      }),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 35,
+                  )
                 ],
               ),
-            ),
+            )
           ],
         ),
+      ),
+    );
+  }
+
+  Container _buildHomeListMapel(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 21),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text(
+                'Pilih Pelajaran',
+                style: pilihPelajaranText,
+              ),
+              Spacer(),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(MapelPage.route);
+                },
+                child: Text('Lihat Semua'),
+              )
+            ],
+          ),
+          MapelWidget(),
+          MapelWidget(),
+          MapelWidget(),
+        ],
+      ),
+    );
+  }
+
+  Container _buildTopBanner(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20.0),
+      decoration: BoxDecoration(
+          color: primaryColor, borderRadius: BorderRadius.circular(20)),
+      height: 147,
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width * 0.4,
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+              child: Text(
+                'Mau kerjain latihan soal apa hari ini?',
+                style: homeText,
+              ),
+            ),
+          ),
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child: Image.asset(
+              'assets/home_image.png',
+              width: MediaQuery.of(context).size.width * 0.5,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildUserHomeProfile() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Hai,  Nama User',
+                  style: haiText,
+                ),
+                Text(
+                  'Selamat Datang',
+                  style: selamatDatangText,
+                ),
+              ],
+            ),
+          ),
+          Image.asset(
+            'assets/avatar_icon.png',
+            width: 35,
+            height: 35,
+          ),
+        ],
       ),
     );
   }
