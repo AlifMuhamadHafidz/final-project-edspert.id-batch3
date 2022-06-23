@@ -29,6 +29,48 @@ const Color primarySubtitleTextColor = Color(0xFF6A7483);
 const Color hintTextColor = Color(0xFFAAAAAA);
 const Color genderTextColor = Color(0xFF282828);
 
+TextStyle exitText = GoogleFonts.poppins(
+  color: Colors.red,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+);
+
+TextStyle subtitleIdentitasText = GoogleFonts.poppins(
+  color: Colors.black.withOpacity(0.4),
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);
+
+TextStyle titleIdentitasText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w400,
+  fontSize: 13,
+);
+
+TextStyle identitasText = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+);
+
+TextStyle subtitleSekolahText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);
+
+TextStyle editProfileText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+  fontSize: 15,
+);
+
+TextStyle profileText = GoogleFonts.poppins(
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+  fontSize: 20,
+);
+
 TextStyle appBarText = GoogleFonts.poppins(
   color: Colors.white,
   fontWeight: FontWeight.w700,
